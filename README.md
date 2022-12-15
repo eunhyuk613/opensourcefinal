@@ -28,3 +28,10 @@ decisiontree_classifier = sklearn.tree.DecisionTreeClassifier()
 rfc = ensemble.RandomForestClassifier()
 
 -> Accuracy_rfc: 0.87
+
+## (final-code) logistic regression 기법 사용.
+
+log = sklearn.linear_model.LogisticRegression(max_iter=4000, C=5.0, random_state=1, class_weight='balanced')
+log.fit(X,y)
+y_pred_log = np.zeros_like(y_test)
+y_pred_log = log.predict(X_test)
