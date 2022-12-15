@@ -32,6 +32,13 @@ rfc = ensemble.RandomForestClassifier()
 ## (final-code) logistic regression 기법 사용.
 
 log = sklearn.linear_model.LogisticRegression(max_iter=4000, C=5.0, random_state=1, class_weight='balanced')
-log.fit(X,y)
-y_pred_log = np.zeros_like(y_test)
-y_pred_log = log.predict(X_test)
+
+max_iter(최대 반복횟수)를 4000번으로 늘려 더 정확도를 높이고자 함.
+
+C값이 클수록 overfitting의 위험이 있지만, real test set에 대한 정확도를 확인할 수 없는 상황이므로 practice data set에 대하여 정확도가 높은 방법을 찾고자 C를 5.0으로 늘림.
+
+randon_state를 1로 지정함. 이는 랜덤변수의 시드값을 1로 지정해줌.
+
+class_weight를 balanced로 지정해주어 클래스에 대한 가중치값을 고르게 사용하고자 함.
+
+-> real test set accyracy = 0.7386
