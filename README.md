@@ -11,16 +11,20 @@ tumor dataset을 7:3의 비율로 분리하여 training 및 test 진행.
   ### perceptron
 
 ppn = sklearn.linear_model.Perceptron(max_iter=4000, eta0=100, random_state=1)
+
 -> Accuracy_ppn: 0.77
     
 ### logistic regression
 log = sklearn.linear_model.LogisticRegression(max_iter=4000, C=5.0, random_state=1, class_weight='balanced')
+
 -> Accuracy_log: 1.00
     
 ### decision tree classifier
 decisiontree_classifier = sklearn.tree.DecisionTreeClassifier()
+
 -> Accuracy_tree: 0.81
 
 ### random forest classifier
 rfc = ensemble.RandomForestClassifier()
+
 -> Accuracy_rfc: 0.87
