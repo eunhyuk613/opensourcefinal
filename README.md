@@ -10,7 +10,7 @@ tumor dataset을 7:3의 비율로 분리하여 training 및 test 진행.
 
   <h3> perceptron
 
-ppn = sklearn.linear_model.Perceptron(max_iter=4000, eta0=100, random_state=1)
+<h4>ppn = sklearn.linear_model.Perceptron(max_iter=4000, eta0=100, random_state=1)
 -> Accuracy_ppn: 0.77
     
   <h3> logistic regression
